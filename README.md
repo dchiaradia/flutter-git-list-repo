@@ -1,4 +1,4 @@
-# List Git Repo
+# Flutter List Git Repo
 
 Projeto flutter para demonstrar o consumo da API do GIT com objetivo de listar os repositorios de um usuário
 
