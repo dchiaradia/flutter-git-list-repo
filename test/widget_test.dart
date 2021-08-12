@@ -8,17 +8,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:radix_avaliacao/main.dart';
+import 'package:git_list_repo/Screens/Dashboard/dashboardUI.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  testWidgets('Screen Test - DashboardUI', (WidgetTester tester) async {
+    //constroi o APP e chamando uma tela especifica
+    await tester.pumpWidget(DashboardPage());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
+    //verifica se vai encontrar um texto na tela
+    //chamado de LISTA REPOSITORIOS
+    expect(find.text('Lista Repositorios'), findsOneWidget);
     expect(find.text('1'), findsNothing);
-
+    /*
     // Tap the '+' icon and trigger a frame.
     await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
@@ -26,5 +27,6 @@ void main() {
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
+    */
   });
 }
